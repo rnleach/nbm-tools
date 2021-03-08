@@ -2,7 +2,6 @@ use optional::Optioned;
 
 /// A parsed NBM 1D viewer CSV file.
 pub struct NBMData {
-    init_time: chrono::NaiveDateTime,
     rows: Vec<chrono::NaiveDateTime>,
     cols: Vec<String>,
     num_rows: usize,
@@ -11,11 +10,6 @@ pub struct NBMData {
 }
 
 impl NBMData {
-    /// Get the initialization time for this file.
-    pub fn initialization_time(&self) -> chrono::NaiveDateTime {
-        self.init_time
-    }
-
     /// Get an iterator over rows for a given column.
     ///
     /// If no such column exists, it will return an `nbm_tools::Error::NoSuchColumn` error value.
@@ -43,7 +37,6 @@ impl NBMData {
         assert_eq!(vals.len(), num_rows * num_cols);
 
         Ok(NBMData {
-            init_time: rows[0],
             rows,
             cols,
             num_rows,

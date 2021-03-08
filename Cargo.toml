@@ -1,6 +1,6 @@
 [package]
 name = "nbm-tools"
-version = "0.1.0"
+version = "0.1.1"
 authors = ["Ryan <rnleach@users.noreply.github.com>"]
 description = "A library for parsing and analyzing NBM 1D text files."
 publish = false
