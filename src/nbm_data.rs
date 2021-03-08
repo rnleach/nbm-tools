@@ -75,9 +75,9 @@ impl std::str::FromStr for NBMData {
     }
 }
 
-/// An iterator over the values of a column and the valid time of that value. 
+/// An iterator over the values of a column and the valid time of that value.
 ///
-/// This struct is returned from the `NBMData::column_iter()` method. 
+/// This struct is returned from the `NBMData::column_iter()` method.
 pub struct NBMColumnIter<'a> {
     col: usize,
     curr_row: usize,
